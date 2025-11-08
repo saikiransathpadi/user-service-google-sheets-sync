@@ -1,0 +1,49 @@
+# Data and build artifacts
+var/*
+!var/.keep
+
+# Terraform
+.terraform
+.terraform.lock.hcl
+terraform/*.auto.tfvars
+terraform/*.tfstate
+terraform/terraform.tfvars
+
+# Environment
+.env*
+!.env.example
+env
+docs/http/http-client.env.json
+
+# Mac
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+venv
+.python-version
+
+# mypy
+.mypy_cache
+
+# PyTest
+.pytest_cache
+
+# Coverage
+.coverage
+
+# Draw.io
+*.drawio.bkp
+*.drawio.dtmp
+
+# IntelliJ
+.idea/
+out/
+settings.json
+
+# Snyk 
+.dccache
+
+# Tmp
+\tmp*
