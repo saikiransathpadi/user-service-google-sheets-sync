@@ -4,6 +4,7 @@ from motor.motor_asyncio import AsyncIOMotorClient
 from httpx import AsyncClient
 from main import app
 from app.config import settings
+from app.database import connect_to_mongo
 
 
 @pytest.fixture(scope="session")
@@ -17,6 +18,7 @@ def event_loop():
 async def test_db():
     test_client = AsyncIOMotorClient(settings.mongodb_uri)
     test_database = test_client.get_default_database()
+    await connect_to_mongo()
 
     yield test_database
 

@@ -69,5 +69,5 @@ async def get_current_user_info(email: str):
         "email": user["email"],
         "name": user["name"],
         "profile_pic": user.get("profile_pic"),
-        "created_at": user["created_at"]
+        "created_at": user.get("created_at"),
     }
